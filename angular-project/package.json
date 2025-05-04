@@ -7,8 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
+    "lint": "eslint \"src/**/*.{ts,html}\"",
+    "lint:fix": "eslint --fix \"src/**/*.{ts,html}\"",
     "prettier": "npx prettier . --check",
     "prettier:write": "npx prettier . --write"
   },
