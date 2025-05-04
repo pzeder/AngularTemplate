@@ -2,8 +2,12 @@
   @for (row of game.board(); track row[0]; let rowIndex = $index) {
     <div class="row">
       @for (cell of row; track cell; let columnIndex = $index) {
-        <div class="cell" [ngClass]="cell" (click)="game.tryPlay(rowIndex, columnIndex)">
-          <div class="symbol">{{cell}}</div>
+        <div
+          class="cell"
+          [ngClass]="cell"
+          (click)="game.tryPlay(rowIndex, columnIndex)"
+        >
+          <div class="symbol">{{ cell }}</div>
         </div>
       }
     </div>
@@ -13,8 +17,8 @@
 @if (game.gameOver()) {
   <div class="overlay">
     <div class="dialog">
-      @if (game.winner() !== '') {
-        <div class="title">Winner: {{game.winner()}}</div>
+      @if (game.winner() !== "") {
+        <div class="title">Winner: {{ game.winner() }}</div>
       } @else {
         <div class="title">It's a draw</div>
       }
